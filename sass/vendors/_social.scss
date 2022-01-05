@@ -1,0 +1,24 @@
+/* Style all font awesome icons */
+.fa {
+    padding: 1.5rem;
+    font-size: 3rem;
+    width: 5rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: $color-white;
+    border: 2px solid $color-white;
+
+    &:not(:last-child)
+
+    {
+        margin-right: 1rem;
+    }
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    color: $color-blue-light;
+    border: 2px solid  $color-blue-light;
+  }
+  

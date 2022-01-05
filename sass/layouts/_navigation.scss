@@ -1,0 +1,202 @@
+.navigation
+
+{
+    padding: 3rem;
+
+    @include respond(tab-port)
+    {
+        display: none;
+    }
+    
+    &__list
+    {   
+        text-align: right;
+    }
+
+    &__items
+    {
+        display: inline-block;
+ 
+    }
+
+    &__links
+    {
+        &:link,
+        &:visited
+        {
+            font-size: 1.7rem;
+            text-decoration: none;
+            color: $color-white;
+            margin-right: 1.5rem;
+            border-bottom: 2px solid transparent;
+            transition: all  .5s;
+            padding-bottom: 1rem;
+    
+        }
+
+        &:hover,
+        &:active
+        {
+            border-bottom: 2px solid $color-blue-light;
+            color: $color-blue-light;
+        }
+    
+    }
+
+    &__seperator
+    {
+
+        background-color: $color-white;
+        height: 1.2rem;
+        width: 1px;
+        display: inline-block;
+        margin-right: 1.5rem;
+
+    }
+}
+
+.nav
+{
+    height: 100vh;
+    width: 35rem;
+    background-color: $color-blue-primary-1;
+    position: fixed;
+    top: 0;
+    right: -35rem;
+    z-index: 10;
+    display: none;
+    transition: ease-in-out .3s;
+   
+    @include respond(tab-port)
+
+    {
+        display: block;
+    }
+
+    @include respond(phone)
+    
+    {
+        display: block;
+        width: 28rem;
+        right: -28rem;
+    }
+
+    &--open
+
+    {
+        right: 0;
+        opacity: 1;
+    }
+
+    &__icons
+
+    {
+        color: $color-white;
+        font-size: 3rem;   
+        margin-right: 1.5rem;
+    }
+
+
+    &__btn-container
+
+    {
+        position: fixed;
+        top: 3.2rem;
+        right: 1.5rem;
+        z-index: 30;
+        display: none;
+
+        @include respond(tab-port)
+        {
+            display: block;
+        }
+    }
+    
+    &__btn, &__btn::before, &__btn::after
+
+    {
+        width: 3rem;
+        height: 2px;
+        background-color: $color-blue-light;
+        display: inline-block;
+     
+    }
+
+    &__btn::before, &__btn::after
+
+    {
+        content: "";
+        position: absolute;
+        left: 0;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+    }
+
+    &__btn::before
+    {
+        top: -.8rem;
+    }
+
+    &__btn::after
+    {
+        top: .8rem;
+    }
+
+   
+
+    &__list
+    {
+        list-style: none;
+    }
+
+    &__items
+    {
+        padding: 1.5rem;
+        
+        &:first-child
+        {
+            margin-top: 6rem;
+        }
+
+        &:nth-child(4)
+        {
+            margin-top: 3rem;
+        }
+    }
+    &__links
+    {
+        &:link,
+        &:visited
+        {
+            text-decoration: none;
+            font-size: 3rem;
+            color: $color-white;
+            padding-bottom: 1.5rem;
+            font-weight: 600;      
+           display: block;
+            border-bottom: .5px solid $color-blue-light;
+        
+        }
+
+        &--register
+        {
+           font-weight: 200 !important;
+           font-size: 3rem !important;
+           border: none !important;
+           padding-bottom: 0 !important;
+           
+        }
+
+    }
+
+    &__text
+
+    {
+        font-size: 2.5rem;
+        text-align: center;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

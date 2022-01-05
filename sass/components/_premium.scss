@@ -1,0 +1,20 @@
+.premium
+
+{
+    text-align: center;
+   
+    &__icon
+
+    {
+        font-size: 8rem;
+        
+        background: linear-gradient(to right bottom, $color-blue-primary, $color-blue-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+         color: transparent;
+         border-bottom: 2px solid $color-blue-light;
+         padding: 2rem;
+         
+        
+    }
+}

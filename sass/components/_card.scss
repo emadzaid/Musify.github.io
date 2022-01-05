@@ -1,0 +1,122 @@
+.card
+
+{
+    height: 70rem;
+    background-color: $color-white-grey;
+    border-radius: 3rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0rem 1rem 3rem rgba($color-black, .4);
+    transition: all .2s;
+
+    @include respond(tab-port)
+    {
+         height: auto;
+    }
+    
+
+    &:hover
+    {
+        transform: translateY(-.5rem);
+    }
+   
+
+
+    &__photo
+
+    {
+        background: url(../img/hero.jpg);
+        height: 23rem;
+        background-size: cover;
+        background-position: center;
+        z-index: 10;
+    }
+
+    &__label
+
+    {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        padding: 1rem 3rem;
+        box-shadow: 0rem 1rem 3rem rgba($color-black,.5);
+        border-radius: 5px;
+   
+     &-text
+     {
+         font-size: 4rem;
+         color: $color-white;
+         font-weight: 200;
+     }
+    }
+
+    &__price
+
+    {
+        text-align: center;
+        height: 10rem;
+        width: 10rem;
+        font-size: 2rem;
+        font-weight: 600;
+        background-color: $color-white-grey; 
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        top: -5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 5px solid $color-blue-light;
+       
+    
+
+        &-value
+
+        {
+            position: absolute;
+            @include abscenter;
+            text-align: center;
+            padding: 2.5rem;
+            color: $color-grey-dark;
+        }
+    }
+
+    &__details
+
+    {
+
+        margin-top: -3rem;
+        margin-left: 1rem;
+    }
+
+    &__items
+
+    {
+        font-size: 1.6rem;
+        color: $color-grey-dark;
+        font-weight: 600;
+        padding: 1rem;
+    }
+
+    &__button
+
+    {
+       
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include respond(tab-port)
+      {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        transform: translateX(0);
+        margin: 2rem 0 2rem 0;
+        text-align: center;
+      }
+        
+    }
+}

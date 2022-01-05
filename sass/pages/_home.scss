@@ -1,0 +1,28 @@
+.section-premium
+
+{
+    padding: 8rem 0;
+}
+
+.section-card
+
+{
+    padding: 10rem 0;
+
+    @include respond(tab-port)
+        {
+            padding: 0 0 10rem 0;
+        }
+        
+}
+
+.section-download
+
+{
+    padding: 8rem 0;
+    @include respond(tab-port)
+    {
+        padding: 0 0 8rem 0;
+    }
+    
+}

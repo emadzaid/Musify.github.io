@@ -1,0 +1,63 @@
+.footer
+
+{
+    padding: 10rem 0;
+    background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6));
+
+    &__list
+
+    {
+        margin-left: 1rem;
+       
+    }
+
+    &__items
+
+    {
+        margin-bottom: 3rem;
+        list-style: none;
+
+    }
+
+    &__links
+
+    {
+        text-decoration: none;
+        color: $color-white;
+        font-size: 1.7rem;
+
+        @include respond(small-phone)
+        {
+            font-size: 1.3rem;
+        }
+
+        &:hover
+        {
+            color: $color-blue-light;
+        }
+        
+    }
+
+    &__icons
+
+    {
+        font-size: 2rem;
+        vertical-align: middle;
+        margin-right: 1.5rem;
+        border: 2px solid $color-white;
+        padding: 1rem;
+        border-radius: 100rem
+    }
+
+    &__about
+
+    {
+        text-align: center;
+        @include respond(tab-port)
+        {
+            text-align: left;
+        }
+
+     
+    }
+}
